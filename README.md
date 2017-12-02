@@ -6,6 +6,7 @@ python3.5,django1.11.2,mysql5.6
 
 ## 项目准备
 1，创建一个名为ahuife的工程：django-admin startproject ahuife
+
 2，在ahuife工程下，创建一个名为blog的app：
 > 首先进入工程根目录：cd ahuife
 
