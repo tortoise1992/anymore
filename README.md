@@ -8,7 +8,9 @@ python3.5,django1.11.2,mysql5.6
 1，创建一个名为ahuife的工程：django-admin startproject ahuife
 2，在ahuife工程下，创建一个名为blog的app：
 > 首先进入工程根目录：cd ahuife
+
 > 然后在终端输入：python manage.py startapp blog
+
 > django默认使用的数据库是sqllite3,我们需要手动将默认数据库改为mysql，找到settings.py的DATABASES，修改为：
 ```
 'default': {
