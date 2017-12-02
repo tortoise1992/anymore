@@ -32,3 +32,7 @@ python3.5,django1.11.2,mysql5.6
 （1）python manage.py makemigrations
 
 （2）python manage.py migrate
+
+#### 2，项目启动
+
+python manage.py runserver 3000
