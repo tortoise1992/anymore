@@ -8,5 +8,9 @@
     <div>
         我是首页
     </div>
+    {% for item in article %}
+    <a href="{% url 'detail' item.id %}" target="_blank">{{item.author}}---------->{{item.content}}</a> <br>
+
+    {% endfor %}
 </body>
 </html>

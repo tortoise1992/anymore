@@ -7,3 +7,7 @@ class User(models.Model):
     userPwd=models.CharField(max_length=10)
 
 
+class Article(models.Model):
+    author=models.CharField(max_length=30)
+    update_time=models.DateTimeField('istime')
+    content=models.CharField(max_length=10000)
