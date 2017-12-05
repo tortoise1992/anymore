@@ -20,5 +20,10 @@ def detail(req,pk):
                                   ])
     return render(req,'blog/detail.html',{'post':post})
 
-def list(req):
-    return render(req,'list.html')
+def archives(req,year,month):
+    post_list=Post.objects.filter(
+        create_time__year=year,
+        create_time__month=month
+    ).filter().order_by('-create_time')
+    print(year,month)
+    return render(req,'blog/index.html',{'post_list':post_list})
