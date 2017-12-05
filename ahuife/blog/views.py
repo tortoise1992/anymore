@@ -23,7 +23,9 @@ def detail(req,pk):
 def archives(req,year,month):
     post_list=Post.objects.filter(
         create_time__year=year,
-        create_time__month=month
+        # create_time__month=month
+        author_id=1
+        # 无法按月查询就多保存一个字段
     ).filter().order_by('-create_time')
     print(year,month)
     return render(req,'blog/index.html',{'post_list':post_list})
