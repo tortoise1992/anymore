@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 class User(models.Model):
     userName=models.CharField(max_length=30)
@@ -21,3 +21,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category)
     tags = models.ManyToManyField(Tag, blank=True)
     author = models.ForeignKey(User)
+
+    def get_abs_path(self):
+        return reverse('blog:detail',kwargs={'pk':self.pk})
+        # print(self.pk)
