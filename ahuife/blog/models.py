@@ -22,6 +22,6 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     author = models.ForeignKey(User)
 
-    def get_abs_path(self):
+    def get_absolute_url(self):
         return reverse('blog:detail',kwargs={'pk':self.pk})
         # print(self.pk)
